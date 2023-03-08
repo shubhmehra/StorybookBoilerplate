@@ -80,14 +80,10 @@
     "webpack-dev-server": "^4.11.1"
   },
   "publishConfig": {
-    "access": "public",
     "registry": "https://registry.npmjs.org"
   },
   "files": [
     "dist/"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:shubhmehra/storybook-boilerplate.git"
-  }
+  "repository": "git@github.com:shubhmehra/storybook-boilerplate.git"
 }
