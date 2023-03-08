@@ -22,6 +22,5 @@
   "license": "ISC",
   "devDependencies": {
     "lerna": "^6.5.1"
-  },
-  "gitHead": "480d7da4052819aff8801895075fc5078f5cfd12"
+  }
 }
