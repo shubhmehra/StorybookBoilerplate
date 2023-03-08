@@ -4,11 +4,10 @@
   ],
   "version": "independent",
   "npmClient": "npm",
+  "private": false,
   "command": {
     "publish": {
       "registry": "https://registry.npmjs.org"
     }
-  },
-  "$schema": "node_modules/lerna/schemas/lerna-schema.json",
-  "useWorkspaces": false
+  }
 }
