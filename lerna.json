@@ -4,7 +4,6 @@
   ],
   "version": "independent",
   "npmClient": "npm",
-  "private": false,
   "command": {
     "publish": {
       "registry": "https://registry.npmjs.org"
