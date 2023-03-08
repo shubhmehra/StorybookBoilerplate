@@ -20,11 +20,8 @@
   },
   "author": "",
   "license": "ISC",
-  "workspaces": [
-    "packages/*"
-  ],
   "devDependencies": {
     "lerna": "^6.5.1"
   },
-  "gitHead": "16582ebf483381f63c830b580eaf0b682a88d7b2"
+  "gitHead": "480d7da4052819aff8801895075fc5078f5cfd12"
 }
