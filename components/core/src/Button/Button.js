@@ -19,9 +19,6 @@ const Button = ({ primary, backgroundColor, size, label, ...props }) => {
 Button.propTypes = {
   primary: PropTypes.bool,
   backgroundColor: PropTypes.string,
-  /**
-   * How large should the button be?
-   */
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   /**
    * Button contents
