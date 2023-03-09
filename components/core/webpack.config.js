@@ -1,4 +1,6 @@
-const path = require("path");
+const path = require('path');
+const webpack = require('webpack');
+const rules = require('../../configs/rules.config');
 
 module.exports = {
   entry: './index.js',
@@ -7,26 +9,35 @@ module.exports = {
     filename: 'index.js',
     libraryTarget: 'commonjs',
   },
-  devServer: {
-    port: 3030, // you can change the port
-  },
   module: {
-    rules: [
-      {
-        loader: 'babel-loader',
-        options: {
-          presets: ['@babel/react'],
-        },
-      },
-      {
-        test: /\.(sa|sc|c)ss$/, // styles files
-        use: ["style-loader", "css-loader", "sass-loader"],
-      },
-      {
-        test: /\.(png|woff|woff2|eot|ttf|svg)$/, // to import images and fonts
-        loader: "url-loader",
-        options: { limit: false },
-      },
-    ],
+    rules,
   },
+  externals: {
+    react: {
+      root: 'React',
+      commonjs2: 'react',
+      commonjs: 'react',
+      amd: 'react',
+    },
+    'react-dom': {
+      root: 'ReactDOM',
+      commonjs2: 'react-dom',
+      commonjs: 'react-dom',
+      amd: 'react-dom',
+    },
+    'styled-components': {
+      commonjs: 'styled-components',
+      commonjs2: 'styled-components',
+      amd: 'styled-components',
+    },
+  },
+  resolve: {
+    extensions: ['*', '.js', '.jsx', '.json'],
+    modules: ['node_modules'],
+  },
+  plugins: [
+    new webpack.optimize.LimitChunkCountPlugin({
+      maxChunks: 1,
+    }),
+  ],
 };
